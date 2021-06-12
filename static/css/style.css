@@ -1,0 +1,20 @@
+table {
+    margin: 10px 0;
+    font-size: 1.3em;
+    min-width: 400px;
+    
+}
+
+tbody {
+    margin: auto;
+}
+
+td {
+    padding-left: 3%;
+    padding-top: 1%;
+}
+
+.mars-hemi-title {
+    text-align: center;
+    font-weight: bold;
+}

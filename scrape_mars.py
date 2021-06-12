@@ -27,15 +27,17 @@ def imgageScrape():
 def factsScrape():
     url = "https://galaxyfacts-mars.com/"
     tables = pd.read_html(url)
+    
     mars_prof_df = tables[1]
-    return mars_prof_df.to_html()
+    
+    return mars_prof_df.to_html(header=False, index=False)
 
 def hemiScrape():
     hemisphere_image_urls = [
-    {"title": "Valles Marineris Hemisphere", "img_url": "https://marshemispheres.com/valles.html"},
-    {"title": "Cerberus Hemisphere", "img_url": "https://marshemispheres.com/cerberus.html"},
-    {"title": "Schiaparelli Hemisphere", "img_url": "https://marshemispheres.com/schiaparelli.html"},
-    {"title": "Syrtis Major Hemisphere", "img_url": "https://marshemispheres.com/syrtis.html"}
+    {"title": "Valles Marineris Hemisphere", "img_url": "https://marshemispheres.com/images/valles_marineris_enhanced-full.jpg"},
+    {"title": "Cerberus Hemisphere", "img_url": "https://marshemispheres.com/images/full.jpg"},
+    {"title": "Schiaparelli Hemisphere", "img_url": "https://marshemispheres.com/images/schiaparelli_enhanced-full.jpg"},
+    {"title": "Syrtis Major Hemisphere", "img_url": "https://marshemispheres.com/images/syrtis_major_enhanced-full.jpg"}
     ]
     return hemisphere_image_urls
 
@@ -47,4 +49,5 @@ def scrape():
 
     return {"news_title" : news_title, "news_p": news_p, "featured_img_url" : featured_img_url, "mars_facts" : mars_facts, "hemisphere_image_urls" :hemisphere_image_urls}
 
-
+if __name__ == "__main__":
+    factsScrape()
