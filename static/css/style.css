@@ -1,8 +1,11 @@
+body {
+    font-family: sans-serif;
+}
+
 table {
     margin: 10px 0;
     font-size: 1.3em;
     min-width: 400px;
-    
 }
 
 tbody {
@@ -18,3 +21,15 @@ td {
     text-align: center;
     font-weight: bold;
 }
+
+.jumbotron {
+    background-image: url('https://i1.sndcdn.com/avatars-000543039720-13iqyy-t500x500.jpg');
+}
+
+.jumbotron h1 {
+    color: rgb(221, 170, 221);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    
+}
+
