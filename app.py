@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 @app.route('/scrape')
 def echo():
-    redirect("/scrape")
     conn = 'mongodb://localhost:27017'
     client = pymongo.MongoClient(conn)
     db = client.mars_db
@@ -21,6 +20,7 @@ def echo():
 
 @app.route("/")
 def index():
+    redirect("/scrape")
     conn = 'mongodb://localhost:27017'
     client = pymongo.MongoClient(conn)
     db = client.mars_db
